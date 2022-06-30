@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Monty Hall Paradox Problem Brute Forcer</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mt-4">Monty Hall Paradox Problem Brute Forcer</h1>
+        <div class="row mt-4">
+
+            <div class="row mt-2 mb-3">
+                <small>
+                    Made by <a target="_blank" href="https://github.com/terremoth/monty-hall-paradox-cracker">Terremoth</a> with love ❤️ 
+                </small>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <div class="form-group">
+                    <label class="form-label" for="run_times">Run times</label>
+                    <input class="form-control" type="number" value="1000" id="run_times" min="10">
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <div class="form-group">
+                    <label class="form-label" for="debug">Debug what is happening?</label>
+                    <select class="form-control" id="debug">
+                        <option selected value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-12 mt-2">
+                <button class="btn btn-primary mt-4" id="run_btn">Run!</button>
+            </div>
+        </div>
+        <hr>
+        <table class="table table-hover table-striped table-bordered table-small">
+            <thead>
+                <tr>
+                    <th>Player first choice</th>
+                    <th>Choices without player's choice</th>
+                    <th>Presenter says it is not <strong>on</strong></th>
+                    <th>The Premium is on this array</th>
+                    <th>Premium is setted on</th>
+                    <th>Player changes to</th>
+                    <th>Player won</th>
+                </tr>
+            </thead>
+            <tbody id="result"></tbody>
+            <tfoot>
+                <tr>
+                    <td>Sum:</td>
+                    <td id="sums" colspan="20">Waiting...</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="monty_hall.js"></script>
+</body>
+
+</html>
